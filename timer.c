@@ -23,7 +23,7 @@ static void timer_func(unsigned long data)
     int i;
 
     for (i = 0; i < data; ++i) {
-        printk("Hello world! Interval=%lu\n", jiffies/HZ);
+        printk("Hello, world!\n");
     }
     create_timer();
     printk("\n");
@@ -90,6 +90,7 @@ static int __init writer_init(void)
         kobject_put(timer_kobj);
         return ret;
     }
+
     return 0;
 }
 

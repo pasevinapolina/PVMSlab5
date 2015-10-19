@@ -78,7 +78,7 @@ static int __init writer_init(void)
 
     active = 0;
     sleep_time = 3;
-    init_timer_on_stack(&hello_timer);
+    init_timer(&hello_timer);
 
     timer_kobj = kobject_create_and_add("kobject_timer", kernel_kobj);
     if (!timer_kobj) {
